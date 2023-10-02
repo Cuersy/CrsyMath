@@ -39,11 +39,12 @@ int main() {
 	bool ab =  a.setandCalculateFaktoryel(100);
 	if (!ab) return 1;
 	cout << a.getFaktoryel() << endl;
-	*/
+	
 	permutation a;
 	bool __A = a.calculateAndSetPermutation(6, 3);
 	if (__A) cout << a.getPermutation() << endl;
 	else
 		cout << "Error Occured, can't calculated.";
+	*/
 	return 1;
 }
