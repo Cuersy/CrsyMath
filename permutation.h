@@ -2,7 +2,7 @@
 // P ( n,r ) = ( {n} n-r ) = n! / ( n-r ) !
 #include<iostream>
 #include<nlohmann/json.hpp>
-#include "faktoryel.h"
+#include "factorial.h"
 #include<cmath>
 #define ll long long
 #define ld long double
@@ -17,15 +17,15 @@ public:
 	bool calculateAndSetPermutation(int n, int r){
 		try {
 			/*
-			faktoryel n_f;
-			faktoryel n_r;
-			faktoryel n_f_minus_n_r;
-			n_f.setandCalculateFaktoryel(n);
-			n_r.setandCalculateFaktoryel(r);
-			ld n_f_calc = json(n_f.getFaktoryel())["calculated"];
-			ld r_f_calc = json(n_r.getFaktoryel())["calculated"];
-			n_f_minus_n_r.setandCalculateFaktoryel(n_f_calc - r_f_calc);
-			ld n_f_minus_n_r_calc = json(n_f_minus_n_r.getFaktoryel())["calculated"];
+			Factorial n_f;
+			Factorial n_r;
+			Factorial n_f_minus_n_r;
+			n_f.setandCalculateFactorial(n);
+			n_r.setandCalculateFactorial(r);
+			ld n_f_calc = json(n_f.getFactorial())["calculated"];
+			ld r_f_calc = json(n_r.getFactorial())["calculated"];
+			n_f_minus_n_r.setandCalculateFactorial(n_f_calc - r_f_calc);
+			ld n_f_minus_n_r_calc = json(n_f_minus_n_r.getFactorial())["calculated"];
 			ld calc = n_f_calc / n_f_minus_n_r_calc;
 			this->calculated = calc;
 			this->uncalculated_n = n;
@@ -50,7 +50,7 @@ public:
 			json __c;
 			__c["n"] = this->uncalculated_n;
 			__c["r"] = this->uncalculated_r;
-			callback["Calculated"] = this->calculated;
+			callback["calculated"] = this->calculated;
 			callback["unCalculatedNums"] = __c;
 			return callback;
 		}
