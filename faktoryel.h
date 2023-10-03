@@ -5,12 +5,12 @@
 using json = nlohmann::json;
 #define ll long long
 #define ld long double
-class faktoryel {
+class Factorial {
 private:
 	ld calculated = 0;
 	int uncalculated = 0;
 public:
-	bool setandCalculateFaktoryel(int sayi) {
+	bool calculateAndSetFactorial(int sayi) {
 		try {
 			if (sayi > 20) {
 				ld a = 1;
@@ -35,12 +35,12 @@ public:
 			return false;
 		}
 	}
-	json getFaktoryel() {
+	json getFactorial() {
 		json callback;
 		if (isinf(this->calculated) || int(this->calculated) == 0) {
 			callback["status"] = "failure";
 			callback["errorcode"] = -1;
-			callback["message"] = "The faktoryel is NULL";
+			callback["message"] = "The Factorial is NULL";
 			return callback;
 		}
 		else {
