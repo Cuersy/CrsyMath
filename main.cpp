@@ -4,18 +4,19 @@
 #include<vector>
 #include<nlohmann/json.hpp>
 #include "equation.h"
-#include "faktoryel.h"
+#include "factorial.h"
 #include "permutation.h"
+#include "combination.h"
 using json = nlohmann::json;
 using namespace std;
 #define ll long long
 #define ld long double
 int main() {
 	/*
-	faktoryel a;
-	bool __A = a.setandCalculateFaktoryel(20) ? true : false;
+	Factorial a;
+	bool __A = a.setandCalculateFactorial(20) ? true : false;
 	if (!__A) { cout << "error" << endl; return 1; }
-	json b = a.getFaktoryel();
+	json b = a.getFactorial();
 	int automated = b["status"] == "success" ? b["calculated"] : b["errorcode"];
 	cout << automated << endl;
 	ll x= 1;
@@ -35,16 +36,18 @@ int main() {
 		}
 	}
 	cout << sum << endl;
-	faktoryel a;
-	bool ab =  a.setandCalculateFaktoryel(100);
+	Factorial a;
+	bool ab =  a.setandCalculateFactorial(100);
 	if (!ab) return 1;
-	cout << a.getFaktoryel() << endl;
-	
+	cout << a.getFactorial() << endl;
 	permutation a;
 	bool __A = a.calculateAndSetPermutation(6, 3);
 	if (__A) cout << a.getPermutation() << endl;
 	else
 		cout << "Error Occured, can't calculated.";
-	*/
 	return 1;
+	combination a;
+	a.calculateAndSetCombination(6, 3);
+	cout << a.getCombination();
+	*/
 }
